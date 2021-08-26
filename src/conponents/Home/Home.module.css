@@ -1,0 +1,28 @@
+.wrapper {
+  background-color: #e7ecf2;
+  padding: 90px;
+  margin: auto;
+  width: 430px;
+  min-height: 330px;
+}
+
+.list {
+  font-family: Roboto, sans-serif;
+  width: 250px;
+  min-height: 330px;
+  text-align: center;
+  padding-left: 0;
+}
+
+.button {
+  height: 100%;
+  margin-bottom: 20px;
+  width: 150px;
+  padding: 15px 5px;
+  font-style: italic;
+}
+.task {
+  font-size: 20px;
+  font-weight: 700;
+  font-style: initial;
+}

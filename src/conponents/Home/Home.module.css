@@ -1,4 +1,4 @@
-.wrapper {
+.buttons__wrapper {
   background-color: #e7ecf2;
   padding: 90px;
   margin: auto;
@@ -6,7 +6,7 @@
   min-height: 330px;
 }
 
-.list {
+.buttons__list {
   font-family: Roboto, sans-serif;
   width: 250px;
   min-height: 330px;
@@ -14,14 +14,20 @@
   padding-left: 0;
 }
 
-.button {
+.buttons__button {
   height: 100%;
   margin-bottom: 20px;
   width: 150px;
   padding: 15px 5px;
   font-style: italic;
+  filter: drop-shadow(5px 10px 4px grey);
 }
-.task {
+.buttons__button:hover {
+  filter: drop-shadow(4px 4px 4px grey);
+  background-color: white;
+}
+
+.buttons__task {
   font-size: 20px;
   font-weight: 700;
   font-style: initial;

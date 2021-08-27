@@ -4,9 +4,9 @@ import { Statistics } from '../conponents/Statistics/Statistics';
 import { FriendList } from '../conponents/FriendList/FriendList';
 import { TransactionHistory } from '../conponents/TransactionHistory/TransactionHistory';
 import user from '../json/user.json';
+import statisticalData from '../json/statistical-data.json';
 export const homeButtonClick = e => {
   if (e.target.nodeName !== 'BUTTON') return;
-  console.log(typeof e.target.id);
   switch (e.target.id) {
     case 'profile':
       ReactDOM.render(
@@ -21,7 +21,10 @@ export const homeButtonClick = e => {
       );
       break;
     case 'statistics':
-      ReactDOM.render(<Statistics />, document.getElementById('root'));
+      ReactDOM.render(
+        <Statistics title="Upload stats" stats={statisticalData} />,
+        document.getElementById('root'),
+      );
       break;
     case 'friendList':
       ReactDOM.render(<FriendList />, document.getElementById('root'));

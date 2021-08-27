@@ -1,68 +1,68 @@
 .taskOne {
   text-align: center;
 }
-.wrapper {
+._container {
   background-color: #e7ecf2;
   padding: 90px;
   margin: auto;
-  width: 420px;
+  width: 430px;
   min-height: 330px;
 }
 
-.profile {
+._profile {
   font-family: Roboto, sans-serif;
   width: 250px;
   min-height: 330px;
   text-align: center;
 }
 
-.avatar {
+._avatar {
   width: 100px;
   height: 100px;
   border-radius: 50%;
   margin: auto;
   margin-bottom: 30px;
 }
-.stats {
+._stats {
   display: flex;
   justify-content: space-around;
   padding: 0;
   margin: 0;
 }
-.stats li {
+._stats li {
   border: 1px solid #cad5e3;
   width: 100%;
   background-color: #f3f6f9;
   height: 74px;
   padding: 20px 10px;
 }
-.label {
+._label {
   display: block;
   color: #82909e;
   font-size: 10px;
   margin-bottom: 5px;
 }
-.quantity {
+._quantity {
   display: block;
   color: #1f3349;
   font-weight: 700;
   font-size: 15px;
 }
-.name,
-.tag,
-.location {
+._name,
+._tag,
+._location {
   margin: 0 0 10px;
   color: #82909e;
 }
-.location {
+._location {
   margin: 0;
 }
-.name {
+._name {
   color: #122236;
   font-weight: 700;
   font-size: 24px;
 }
-.description {
+._description {
   background-color: #fff;
   padding: 30px;
   border: 1px solid #cad5e3;

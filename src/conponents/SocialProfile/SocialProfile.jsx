@@ -6,30 +6,30 @@ import { goHomeClick } from '../../utils/goHomeClick';
 export const Profile = ({name, tag, location, stats})  => {
   return (
     <div className={css.taskOne}>
-      <div className={css.wrapper}>
-      <div className={css.profile}>
-        <div className={css.description}>
+      <div className={css._container}>
+      <div className={css._profile}>
+        <div className={css._description}>
           <img
             src="https://i.pinimg.com/originals/a0/40/66/a04066a2d1fcf25df39c599e093995c8.jpg"
             alt="user avatar"
-            className={css.avatar}/>
-          <p className={css.name}>{name}</p>
-          <p className={css.tag}>@{tag}</p>
-          <p className={css.location}>{location}</p>
+            className={css._avatar}/>
+          <p className={css._name}>{name}</p>
+          <p className={css._tag}>@{tag}</p>
+          <p className={css._location}>{location}</p>
         </div>
 
-        <ul className={css.stats}>
+        <ul className={css._stats}>
           <li>
-            <span className={css.label}>Followers</span>
-            <span className={css.quantity}>{stats.followers}</span>
+            <span className={css._label}>Followers</span>
+            <span className={css._quantity}>{stats.followers}</span>
           </li>
           <li>
-            <span className={css.label}>Views</span>
-            <span className={css.quantity}>{stats.views}</span>
+            <span className={css._label}>Views</span>
+            <span className={css._quantity}>{stats.views}</span>
           </li>
           <li>
-            <span className={css.label}>Likes</span>
-            <span className={css.quantity}>{stats.likes}</span>
+            <span className={css._label}>Likes</span>
+            <span className={css._quantity}>{stats.likes}</span>
           </li>
         </ul>
       </div>
@@ -41,9 +41,12 @@ export const Profile = ({name, tag, location, stats})  => {
 
 Profile.propTypes = {
   name: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
-  speaker: PropTypes.string.isRequired,
-  type: PropTypes.string.isRequired,
-  start: PropTypes.string.isRequired,
-  end: PropTypes.string.isRequired,
+  avatar: PropTypes.string.isRequired,
+  stats: PropTypes.exact({
+    followers: PropTypes.number.isRequired,
+    views: PropTypes.number.isRequired,
+    likes: PropTypes.number.isRequired,
+  }),
 };

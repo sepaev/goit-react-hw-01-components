@@ -22,3 +22,21 @@ code {
 * {
   /* outline: 1px solid red; */
 }
+
+.goHome {
+  margin-top: 20px;
+  padding: 5px 40px;
+  background-color: green;
+  font-weight: 800;
+  color: white;
+  height: 60px;
+  border-radius: 100%;
+  filter: drop-shadow(5px 10px 4px grey);
+}
+.goHome:hover {
+  filter: drop-shadow(4px 4px 4px grey);
+}
+
+/* .root {
+  text-align: center;
+} */

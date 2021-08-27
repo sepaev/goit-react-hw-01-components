@@ -25,4 +25,5 @@
   font-size: 20px;
   font-weight: 700;
   font-style: initial;
+  pointer-events: none;
 }

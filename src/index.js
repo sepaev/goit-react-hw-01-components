@@ -1,5 +1,11 @@
-import './index.css';
+import React from 'react';
 import ReactDOM from 'react-dom';
-import { HomeButtons, loadListner } from './conponents/Home/Home'
-ReactDOM.render(<HomeButtons a='5' b={10} />, document.getElementById('root'));
-loadListner();
+import './index.css';
+import { HomeButtons } from './conponents/Home/Home';
+
+ReactDOM.render(
+  <React.StrictMode>
+    <HomeButtons />
+  </React.StrictMode>,
+  document.getElementById('root'),
+);

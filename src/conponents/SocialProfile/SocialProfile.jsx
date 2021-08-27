@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import css from './SocialProfile.module.css';
-import user from '../../json/user.json';
 
-export const Profile = (props) => {
-  // console.log(props); // а=5 b-10
+import { goHomeClick } from '../../utils/goHomeClick';
+
+export const Profile = ({name, tag, location, stats})  => {
   return (
     <div className={css.taskOne}>
       <div className={css.wrapper}>
@@ -13,28 +13,28 @@ export const Profile = (props) => {
             src="https://i.pinimg.com/originals/a0/40/66/a04066a2d1fcf25df39c599e093995c8.jpg"
             alt="user avatar"
             className={css.avatar}/>
-          <p className={css.name}>{user.name}</p>
-          <p className={css.tag}>@{user.tag}</p>
-          <p className={css.location}>{user.location}</p>
+          <p className={css.name}>{name}</p>
+          <p className={css.tag}>@{tag}</p>
+          <p className={css.location}>{location}</p>
         </div>
 
         <ul className={css.stats}>
           <li>
             <span className={css.label}>Followers</span>
-            <span className={css.quantity}>{user.stats.followers}</span>
+            <span className={css.quantity}>{stats.followers}</span>
           </li>
           <li>
             <span className={css.label}>Views</span>
-            <span className={css.quantity}>{user.stats.views}</span>
+            <span className={css.quantity}>{stats.views}</span>
           </li>
           <li>
             <span className={css.label}>Likes</span>
-            <span className={css.quantity}>{user.stats.likes}</span>
+            <span className={css.quantity}>{stats.likes}</span>
           </li>
         </ul>
       </div>
       </div>
-      <button className='goHome'>go home</button>
+      <button className='goHome' onClick={goHomeClick}>go home</button>
     </div>
   );
 };

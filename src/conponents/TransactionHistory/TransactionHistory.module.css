@@ -1,0 +1,32 @@
+.taskFour {
+  margin: auto;
+  text-align: center;
+}
+
+._history {
+  margin: auto;
+  width: 873px;
+  filter: drop-shadow(2px 4px 4px #d6d6d6);
+  background-color: white;
+}
+._head {
+  background-color: #00bcd5;
+  color: white;
+  height: 50px;
+  text-transform: uppercase;
+}
+
+._row_grey,
+._row_white {
+  height: 50px;
+  color: #74797f;
+  outline: #ecf1f4 1px solid;
+  text-transform: capitalize;
+  font-weight: 400;
+}
+._row_grey {
+  background-color: #ecf1f4;
+}
+._row_white {
+  background-color: #ffffff;
+}

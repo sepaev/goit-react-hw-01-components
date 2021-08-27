@@ -34,7 +34,7 @@ export const Profile = ({name, tag, location, stats})  => {
         </ul>
       </div>
       </div>
-      <button className='goHome' onClick={goHomeClick}>go home</button>
+      <button className='goHome' onClick={goHomeClick}>go home from SocialProfile</button>
     </div>
   );
 };

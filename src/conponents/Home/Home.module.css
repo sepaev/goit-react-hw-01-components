@@ -1,12 +1,16 @@
-.buttons__wrapper {
+._container {
   background-color: #e7ecf2;
   padding: 90px;
   margin: auto;
   width: 430px;
   min-height: 330px;
 }
-
-.buttons__list {
+._title {
+  text-align: center;
+  margin: 0;
+  margin-bottom: 60px;
+}
+._list {
   font-family: Roboto, sans-serif;
   width: 250px;
   min-height: 330px;
@@ -14,7 +18,7 @@
   padding-left: 0;
 }
 
-.buttons__button {
+._button {
   height: 100%;
   margin-bottom: 20px;
   width: 150px;
@@ -22,12 +26,12 @@
   font-style: italic;
   filter: drop-shadow(5px 10px 4px grey);
 }
-.buttons__button:hover {
+._button:hover {
   filter: drop-shadow(4px 4px 4px grey);
   background-color: white;
 }
 
-.buttons__task {
+._task {
   font-size: 20px;
   font-weight: 700;
   font-style: initial;

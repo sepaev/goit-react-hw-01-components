@@ -31,6 +31,7 @@ code {
   color: white;
   height: 60px;
   border-radius: 100%;
+  border: unset;
   filter: drop-shadow(5px 10px 4px grey);
 }
 .goHome:hover {

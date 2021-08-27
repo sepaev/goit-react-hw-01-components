@@ -21,7 +21,7 @@ export const TransactionHistory = ({items})  => {
             <Transaction
               key={id}
               type={type}
-              amount={parseFloat(amount)}
+              amount={parseFloat(amount).toFixed(2)}
               currency={currency}
               rowClass={css[`_row_${getColor(index)}`]}
             />)}

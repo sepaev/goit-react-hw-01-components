@@ -5,6 +5,7 @@ import { FriendList } from '../conponents/FriendList/FriendList';
 import { TransactionHistory } from '../conponents/TransactionHistory/TransactionHistory';
 import user from '../json/user.json';
 import statisticalData from '../json/statistical-data.json';
+import friends from '../json/friends.json';
 export const homeButtonClick = e => {
   if (e.target.nodeName !== 'BUTTON') return;
   switch (e.target.id) {
@@ -27,7 +28,10 @@ export const homeButtonClick = e => {
       );
       break;
     case 'friendList':
-      ReactDOM.render(<FriendList />, document.getElementById('root'));
+      ReactDOM.render(
+        <FriendList friends={friends} />,
+        document.getElementById('root'),
+      );
       break;
     case 'transactionHistory':
       ReactDOM.render(<TransactionHistory />, document.getElementById('root'));

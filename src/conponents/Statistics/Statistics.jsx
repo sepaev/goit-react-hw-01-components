@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import css from './Statistics.module.css';
 import { goHomeClick } from '../../utils/goHomeClick';
+import { Stat } from './Stat';
 
 export const Statistics = (props)  => {
 console.log(props.stats);
@@ -11,10 +12,14 @@ console.log(props.stats);
 
         <ul className={css._statList}>
           {props.stats.map(({id, label, percentage, color = getColor(percentage)}) => 
-          <li key ={id} className={css.[`_statItem_${color}`]}>
-            <span className={css._label}>{label}</span>
-            <span className={css._percentage}>{percentage}%</span>
-          </li>
+            <Stat
+              key={id}
+              classItem={css[`_statItem_${color}`]}
+              label = {label}
+              classLabel={css._label}
+              classPercentage = {css._percentage}
+              percentage = {percentage}
+            />
           )}
         </ul>
       </section>

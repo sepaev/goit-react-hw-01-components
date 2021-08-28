@@ -1,7 +1,7 @@
-import PropTypes from 'prop-types';
-import css from './Statistics.module.css';
-import { goHomeClick } from '../../utils/goHomeClick';
-import { Stat } from './Stat';
+import PropTypes        from 'prop-types';
+import css              from './Statistics.module.css';
+import { Stat }         from './Stat';
+import { goHomeClick }  from '../../utils/goHomeClick';
 
 export const Statistics = (props)  => {
  return (

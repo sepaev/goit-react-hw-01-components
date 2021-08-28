@@ -14,15 +14,16 @@ export const TransactionHistory =({items})  => {
       <th>Currency</th>
      </tr>
     </thead>
-    <tbody>
+       <tbody>
      {items.map(({ id, type, amount, currency}, index)  => 
       <Transaction
-       key     ={id}
-       type    ={type}
-       amount  ={parseFloat(amount).toFixed(2)}
-       currency={currency}
-       color   ={getColor(index)}
-      />)}
+      key     ={id}
+      type    ={type}
+      amount  ={parseFloat(amount)}
+      currency={currency}
+      color   ={getColor(index)}
+       />)
+         }
     </tbody>
    </table>
    <button className='goHome' onClick={goHomeClick}>go home from TransactionHistory</button>

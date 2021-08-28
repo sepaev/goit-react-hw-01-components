@@ -4,9 +4,9 @@ import css          from './TransactionHistory.module.css';
 export const Transaction =({type, amount, currency, color })  => {
   return (
     <tr className={css[`_row_${color}`]}>
-      <td>{ type }      </td>
-      <td>{ amount }    </td>
-      <td>{ currency }  </td>
+      <td>{ type }             </td>
+      <td>{ amount.toFixed(2) }</td>
+      <td>{ currency }         </td>
     </tr>
   );
 }

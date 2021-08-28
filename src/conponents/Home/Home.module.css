@@ -36,4 +36,5 @@
   font-weight: 700;
   font-style: initial;
   pointer-events: none;
+  word-break: break-all;
 }

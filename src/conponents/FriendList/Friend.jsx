@@ -1,21 +1,20 @@
 
-import PropTypes from 'prop-types';
+import PropTypes    from 'prop-types';
+import css          from './FriendList.module.css';
 
-export const Friend = ({ classItem, statusClass, avatarClass, avatar, nameClass, name }) => {
-    return (
-        <li className={classItem}>
-            <span className={statusClass}></span>
-            <img className={avatarClass} src={avatar} alt="user avatar" width="48" />
-            <p className={nameClass}>{ name }</p>
-        </li>
-    );
+export const Friend = ({ color, avatar, name })  => {
+  console.log(color);
+  return (
+    <li className = {css._item}>
+      <span className = {css[`_status_${color}`]}></span>
+      <img className = {css._avatar} src = {avatar} alt = "user avatar" width = "48" />
+      <p className = {css._name}>{name}</p>
+    </li>
+  );
 }
 
 Friend.propTypes = {
-    classItem: PropTypes.string.isRequired,
-    statusClass: PropTypes.string.isRequired,
-    avatar: PropTypes.string.isRequired,
-    avatarClass: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    nameClass: PropTypes.string.isRequired,
+  color: PropTypes.oneOf(['green', 'red']),
+  avatar: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
 }

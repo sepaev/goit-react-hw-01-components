@@ -1,32 +1,28 @@
-import PropTypes from 'prop-types';
-import css from './FriendList.module.css';
-import { Friend } from './Friend';
-
+import PropTypes       from 'prop-types';
+import css             from './FriendList.module.css';
+import { Friend }      from './Friend';
 import { goHomeClick } from '../../utils/goHomeClick';
 
 export const FriendList = ({ friends }) => {
-  return (
-    <div className={css.taskThree} >
-      <ul className={css._list}>
-        {friends.map(({ avatar, name, isOnline, id, color = getColor(isOnline)}) =>
-            <Friend
-              key={id}
-              classItem={css._item}
-              statusClass = {css[`_status_${color}`]}
-              avatar = {avatar}
-              avatarClass={css._avatar}
-              name = {name}
-              nameClass = {css._name}
-            />
-       )}
-      </ul>
-      <button className='goHome' onClick={goHomeClick}>go home from FriendList</button>
-    </div>
-  );
+ return (
+  <div className = {css.taskThree} >
+   <ul className = {css._list}>
+    {friends.map(({ avatar, name, isOnline, id, color = getColor(isOnline)}) =>
+      <Friend
+       key = {id}
+       color = {color}
+       avatar = {avatar}
+       name = {name}
+      />
+    )}
+   </ul>
+   <button className = 'goHome' onClick = {goHomeClick}>go home from FriendList</button>
+  </div>
+ );
 };
 function getColor(bool) {
-  return (bool) ? 'green' : 'red';
+ return (bool) ? 'green' : 'red';
 }
 FriendList.propTypes = {
-  friends: PropTypes.arrayOf(PropTypes.object),
+ friends: PropTypes.arrayOf(PropTypes.object),
 };

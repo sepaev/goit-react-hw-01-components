@@ -4,38 +4,34 @@ import { goHomeClick } from '../../utils/goHomeClick';
 import { Stat } from './Stat';
 
 export const Statistics = (props)  => {
-console.log(props.stats);
-  return (
-    <div className={css.taskTwo}>
-      <section className={css._container}>
-        <h2 className={css._title}>{props.title}</h2>
-
-        <ul className={css._statList}>
-          {props.stats.map(({id, label, percentage, color = getColor(percentage)}) => 
-            <Stat
-              key={id}
-              classItem={css[`_statItem_${color}`]}
-              label = {label}
-              classLabel={css._label}
-              classPercentage = {css._percentage}
-              percentage = {percentage}
-            />
-          )}
-        </ul>
-      </section>
-      <button className='goHome' onClick={goHomeClick}>go home from Statistics</button>
-    </div>
-  );
+ return (
+  <div className = {css.taskTwo}>
+   <section className = {css._container}>
+    <h2 className = {css._title}>{props.title}</h2>
+    <ul className = {css._statList}>
+     {props.stats.map(({id, label, percentage}) => 
+      <Stat
+       key        = {id}
+       label      = {label}
+       percentage = {percentage}
+       color      = {getColor(percentage)}
+      />
+     )}
+    </ul>
+   </section>
+   <button className = 'goHome' onClick = {goHomeClick}>go home from Statistics</button>
+  </div>
+ );
 };
 
 function getColor(number) {
-  if (number <= 10) return 'purple';
-  if (number <= 20) return 'red';
-  if (number <= 50) return 'blue';
-  return 'green';
+ if (number <= 10) return 'purple';
+ if (number <= 20) return 'red';
+ if (number <= 50) return 'blue';
+ return 'green';
 }
 
 Statistics.propTypes = {
-  title: PropTypes.string.isRequired,
-  stats: PropTypes.arrayOf(PropTypes.object),
+ title: PropTypes.string.isRequired,
+ stats: PropTypes.arrayOf(PropTypes.object),
 };

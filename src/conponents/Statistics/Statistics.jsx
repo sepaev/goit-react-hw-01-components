@@ -1,14 +1,14 @@
 import PropTypes        from 'prop-types';
-import css              from './Statistics.module.css';
 import { Stat }         from './Stat';
 import { goHomeClick }  from '../../utils/goHomeClick';
+import { ContainerDiv, StatListUl, TaskTwoSection, TitleH2 } from './Statistics.styled';
 
 export const Statistics=({title, stats})  => {
  return (
-  <div className={css.taskTwo}>
-   <section className={css._container}>
-    <h2 className={css._title}>{title}</h2>
-    <ul className={css._statList}>
+  <TaskTwoSection>
+   <ContainerDiv>
+    <TitleH2>{title}</TitleH2>
+    <StatListUl>
      {stats.map(({id, label, percentage}) => 
       <Stat
        key       ={id}
@@ -17,18 +17,18 @@ export const Statistics=({title, stats})  => {
        color     ={getColor(percentage)}
       />
      )}
-    </ul>
-   </section>
+    </StatListUl>
+   </ContainerDiv>
    <button className='goHome' onClick={goHomeClick}>go home from Statistics</button>
-  </div>
+  </TaskTwoSection>
  );
 };
 
 function getColor(number) {
- if (number <= 10) return 'purple';
- if (number <= 20) return 'red';
- if (number <= 50) return 'blue';
- return 'green';
+ if (number <= 10) return '#a43cf5';
+ if (number <= 20) return '#e54d66';
+ if (number <= 50) return '#50c4f7';
+ return '#2e9516';
 }
 
 Statistics.propTypes={

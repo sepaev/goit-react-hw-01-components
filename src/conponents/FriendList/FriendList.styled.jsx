@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-export const TaskThreeDiv = styled.div`
+export const TaskThreeDiv = styled.section`
   text-align: center;
   margin: auto;
 `;

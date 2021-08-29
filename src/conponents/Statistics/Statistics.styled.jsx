@@ -1,7 +1,10 @@
-.taskTwo {
+import styled from "@emotion/styled";
+
+export const TaskTwoSection = styled.section`
   text-align: center;
-}
-._container {
+`;
+
+export const ContainerDiv = styled.div`
   margin: auto;
   text-align: crnter;
   background-color: #eff3f6;
@@ -11,8 +14,9 @@
   padding: 60px 50px;
   display: block;
   width: fit-content;
-}
-._title {
+`;
+
+export const TitleH2 = styled.h2`
   font-weight: 700;
   background-color: white;
   text-align: center;
@@ -23,39 +27,28 @@
   padding: 30px;
   font-size: 16px;
   margin: 0;
-}
-._statList {
+`;
+
+export const StatListUl = styled.ul`
   display: flex;
   padding: 0;
   margin: 0;
-}
-._statItem_purple,
-._statItem_red,
-._statItem_blue,
-._statItem_green {
+`;
+
+export const StatItemLi = styled.li`
   width: 68px;
   padding: 10px;
   text-align: center;
   color: white;
   font-weight: 700;
-}
-._label {
+  background-color: ${({color}) => color};
+`;
+
+export const LabelSpan = styled.span`
   display: block;
   margin-bottom: 9px;
-}
-._percentage {
-  display: block;
-}
+`;
 
-._statItem_purple {
-  background-color: #a43cf5;
-}
-._statItem_red {
-  background-color: #e54d66;
-}
-._statItem_blue {
-  background-color: #50c4f7;
-}
-._statItem_green {
-  background-color: #2e9516;
-}
+export const PercentageSpan = styled.span`
+  display: block;
+`;

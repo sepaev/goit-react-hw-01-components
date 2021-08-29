@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { HomeButtons } from '../conponents/Home/Home';
+import { App } from '../conponents/App/App';
+
 export const goHomeClick = e => {
   e.preventDefault();
   ReactDOM.render(
     <React.StrictMode>
-      <HomeButtons />
+      <App />
     </React.StrictMode>,
     document.getElementById('root'),
   );

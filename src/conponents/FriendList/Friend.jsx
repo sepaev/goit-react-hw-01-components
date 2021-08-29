@@ -1,15 +1,14 @@
 
 import PropTypes    from 'prop-types';
-import css          from './FriendList.module.css';
+import { AvatarImg, ItemLi, NameP, Status }     from './FriendList.styled';
 
 export const Friend=({ color, avatar, name })  => {
-  console.log(color);
   return (
-    <li className={css._item}>
-      <span className={css[`_status_${color}`]}></span>
-      <img className={css._avatar} src={avatar} alt="user avatar" width="48" />
-      <p className={css._name}>{name}</p>
-    </li>
+    <ItemLi>
+      <Status color={color}></Status>
+      <AvatarImg src={avatar} alt="user avatar"/>
+      <NameP>{name}</NameP>
+    </ItemLi>
   );
 }
 

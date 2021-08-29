@@ -28,7 +28,7 @@ export const TitleH2 = styled.h2`
   font-size: 16px;
   margin: 0;
 `;
-export const StatListUll = styled.ul`
+export const StatListUl = styled.ul`
   display: flex;
   padding: 0;
   margin: 0;

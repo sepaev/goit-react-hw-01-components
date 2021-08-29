@@ -1,11 +1,11 @@
-import styled from '@emotion/styled'
+import styled from "@emotion/styled";
 
 export const Container = styled.section`
-    background-color: #e7ecf2;
-    padding: 90px;
-    margin: auto;
-    width: 430px;
-    min-height: 330px;
+  background-color: #e7ecf2;
+  padding: 90px;
+  margin: auto;
+  width: 430px;
+  min-height: 330px;
 `;
 
 export const Title = styled.h1`
@@ -43,4 +43,3 @@ export const Task = styled.span`
   pointer-events: none;
   word-break: break-all;
 `;
-

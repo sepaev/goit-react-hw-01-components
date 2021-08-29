@@ -47,5 +47,5 @@ export const Status = styled.span`
   min-width: 24px;
   min-height: 24px;
   border-radius: 50%;
-  background-color: ${props => props.color};
+  background-color: ${(props) => props.color};
 `;

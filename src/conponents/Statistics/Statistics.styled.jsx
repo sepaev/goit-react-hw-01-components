@@ -1,4 +1,4 @@
-import styled from "@emotion/styled";
+import styled from '@emotion/styled';
 
 export const TaskTwoSection = styled.section`
   text-align: center;
@@ -28,8 +28,7 @@ export const TitleH2 = styled.h2`
   font-size: 16px;
   margin: 0;
 `;
-
-export const StatListUl = styled.ul`
+export const StatListUll = styled.ul`
   display: flex;
   padding: 0;
   margin: 0;
@@ -41,7 +40,7 @@ export const StatItemLi = styled.li`
   text-align: center;
   color: white;
   font-weight: 700;
-  background-color: ${({color}) => color};
+  background-color: ${({ color }) => color};
 `;
 
 export const LabelSpan = styled.span`

@@ -11,7 +11,7 @@ export const Stat = ({ color, label, percentage }) => {
 };
 
 Stat.propTypes = {
-  color: PropTypes.oneOf(["#a43cf5", "#e54d66", "#50c4f7", "#2e9516"]),
+  color: PropTypes.oneOf(["purple", "red", "blue", "green"]),
   label: PropTypes.string.isRequired,
   percentage: PropTypes.number.isRequired,
 };

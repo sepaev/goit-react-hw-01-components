@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import styled from "@emotion/styled";
 
 export const TaskTwoSection = styled.section`
   text-align: center;
@@ -40,7 +40,20 @@ export const StatItemLi = styled.li`
   text-align: center;
   color: white;
   font-weight: 700;
-  background-color: ${({ color }) => color};
+  background-color: ${({ color }) => {
+    switch (color) {
+      case "purple":
+        return "#a43cf5";
+      case "red":
+        return "#e54d66";
+      case "blue":
+        return "#50c4f7";
+      case "green":
+        return "#2e9516";
+      default:
+        return "#000";
+    }
+  }};
 `;
 
 export const LabelSpan = styled.span`
